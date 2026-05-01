@@ -50,6 +50,8 @@ npm run start
 
 Segun la consigna, el programa debe interpretar comandos para consultar, crear, actualizar y eliminar productos usando Fake Store API.
 
+La salida debe imprimirse con `console.log(data)` sin darle formato adicional a los datos.
+
 ## Ejemplos de uso esperados
 
 ### Obtener todos los productos
@@ -58,10 +60,41 @@ Segun la consigna, el programa debe interpretar comandos para consultar, crear, 
 npm run start GET products
 ```
 
+Salida esperada (fragmento):
+
+```
+[
+  {
+    id: 1,
+    title: 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops',
+    price: 109.95,
+    description: 'Your perfect pack for everyday use...',
+    category: "men's clothing",
+    image: 'https://fakestoreapi.com/img/...',
+    rating: { rate: 3.9, count: 120 }
+  },
+  ... (20 productos en total)
+]
+```
+
 ### Obtener un producto por ID
 
 ```bash
 npm run start GET products/7
+```
+
+Salida esperada:
+
+```
+{
+  id: 7,
+  title: 'White Gold Plated Princess',
+  price: 9.99,
+  description: 'Classic Created Wedding Engagement Solitaire Diamond Promise Ring...',
+  category: 'jewelery',
+  image: 'https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png',
+  rating: { rate: 3, count: 400 }
+}
 ```
 
 ### Crear un producto
@@ -70,10 +103,35 @@ npm run start GET products/7
 npm run start POST products "Remera negra" 29.99 "men's clothing"
 ```
 
+Salida esperada:
+
+```
+{
+  id: 21,
+  title: 'Remera negra',
+  price: '29.99',
+  category: "men's clothing"
+}
+```
+
 ### Eliminar un producto
 
 ```bash
 npm run start DELETE products/7
+```
+
+Salida esperada:
+
+```
+{
+  id: 7,
+  title: 'White Gold Plated Princess',
+  price: 9.99,
+  description: 'Classic Created Wedding Engagement Solitaire Diamond Promise Ring...',
+  category: 'jewelery',
+  image: 'https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png',
+  rating: { rate: 3, count: 400 }
+}
 ```
 
 ## Autoevaluacion con tests
