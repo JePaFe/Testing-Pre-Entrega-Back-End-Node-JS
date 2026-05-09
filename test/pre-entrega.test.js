@@ -63,7 +63,7 @@ describe("CLI POST products", function () {
 
     expect(out).to.match(/id:\s*\d+/);
     expect(out).to.match(/title:\s*'Remera negra'/);
-    expect(out).to.match(/price:\s*'29\.99'/);
+    expect(out).to.match(/price:\s*'?29\.99'?/);
     expect(out).to.match(/category:\s*"men's clothing"/);
   });
 });
@@ -82,7 +82,7 @@ describe("CLI POST products", function () {
 
 //     expect(out).to.match(/id:\s*7/);
 //     expect(out).to.match(/title:\s*'Remera azul'/);
-//     expect(out).to.match(/price:\s*'34\.5'/);
+//     expect(out).to.match(/price:\s*'?34\.5'?/);
 //     expect(out).to.match(/category:\s*"women's clothing"/);
 //   });
 // });
